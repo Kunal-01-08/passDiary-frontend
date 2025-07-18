@@ -68,6 +68,9 @@ const [message, setmessage] = useState("")
         if(resjson.error==="User already exists"){
           setErrorSignup("signupError",{message:"User already exists"})
         }
+          else if(resjson.error==="Unverified user already present, please check your inbox for the verification link"){
+           setErrorSignup("signupError",{message:"Unverified user already present, please check your inbox for the verification link"})
+          }
         else{
           setmessage(resjson.message)
           console.log(resjson)
