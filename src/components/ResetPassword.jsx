@@ -20,7 +20,7 @@ const token = queryParams.get('token');
 
   const ResetPassword = async (data) => {
 
-    let res = await fetch("http://localhost:3000/ResetPassword", {
+    let res = await fetch("https://passdiary-backend.onrender.com/ResetPassword", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ token:token, newPassword:data.newPassword }),
