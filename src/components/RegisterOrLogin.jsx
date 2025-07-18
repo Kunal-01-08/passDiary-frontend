@@ -70,6 +70,7 @@ const [message, setmessage] = useState("")
         }
         else{
           setmessage(resjson.message)
+          console.log(resjson.message)
           resetSignup()
 
         }
