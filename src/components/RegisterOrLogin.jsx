@@ -53,7 +53,7 @@ const [message, setmessage] = useState("")
     }
     else{
 
-      const signupRes=await fetch("http://localhost:3000/Signup",{
+      const signupRes=await fetch("https://passdiary-backend.onrender.com/Signup",{
         method:"POST",
        headers: {
     'Content-Type': 'application/json'
@@ -81,7 +81,7 @@ const [message, setmessage] = useState("")
     try{
      
     console.log(data)
-    const loginRes=await fetch("http://localhost:3000/Login",{
+    const loginRes=await fetch("https://passdiary-backend.onrender.com/Login",{
         method:"POST",
        headers: {
     'Content-Type': 'application/json'
