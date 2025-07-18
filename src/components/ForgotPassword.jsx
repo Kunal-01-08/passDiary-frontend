@@ -13,7 +13,7 @@ const ForgotPassword = () => {
   const [message, setmessage] = useState("")
 
   const ForgotPassword=async (data) => {
-    let res=await fetch("http://localhost:3000/ForgotPassword",{method:"POST",headers: { 'Content-Type': 'application/json' },body:JSON.stringify({email:data.email})})
+    let res=await fetch("https://passdiary-backend.onrender.com/ForgotPassword",{method:"POST",headers: { 'Content-Type': 'application/json' },body:JSON.stringify({email:data.email})})
     if(res.ok){
       let resjson=await res.json()
       setmessage(resjson.message)
