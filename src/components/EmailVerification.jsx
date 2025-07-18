@@ -15,7 +15,7 @@ let email = queryParams.get('email');
     useEffect(() => {
         let func = async ()=>{
 
-            let res = await fetch("http://localhost:3000/EmailVerification", {
+            let res = await fetch("https://passdiary-backend.onrender.com/EmailVerification", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
