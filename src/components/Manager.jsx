@@ -26,7 +26,7 @@ const Manager = () => {
 
   const saveToDb = async (data) => {
     let token=localStorage.getItem("token")
-    let res = await fetch("http://localhost:3000/", {
+    let res = await fetch("https://passdiary-backend.onrender.com/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -64,7 +64,7 @@ const Manager = () => {
       setusername(props.username);
       setpassword(props.password);
       let token=localStorage.getItem("token")
-      let res = await fetch(`http://localhost:3000/${props._id}`, {
+      let res = await fetch(`https://passdiary-backend.onrender.com/${props._id}`, {
         method: "DELETE",
         headers: {
     Authorization: `Bearer ${token}`
@@ -82,7 +82,7 @@ const Manager = () => {
     let c = confirm("Do you want to delete?");
     if (c) {
       let token=localStorage.getItem("token")
-      let res = await fetch(`http://localhost:3000/${_id}`, {
+      let res = await fetch(`https://passdiary-backend.onrender.com/${_id}`, {
         method: "DELETE",
         headers: {
     Authorization: `Bearer ${token}`
@@ -121,7 +121,7 @@ const Manager = () => {
     }
     else{
 
-      let res = await fetch("http://localhost:3000/",{
+      let res = await fetch("https://passdiary-backend.onrender.com/",{
         headers: {
     Authorization: `Bearer ${token}`
   }
