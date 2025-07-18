@@ -44,6 +44,8 @@ const [message, setmessage] = useState("")
   };
 
   const signupSubmit =async (data) => {
+
+    console.log("Signup Initiated...")
     
    setmessage("")
 
